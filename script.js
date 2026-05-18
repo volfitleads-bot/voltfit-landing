@@ -10,8 +10,8 @@
 // ============= 1) CONFIGURACIÓN =============
 // IMPORTANTE: Reemplaza estos valores con los de TU proyecto Supabase
 // Los obtienes en: Supabase → Project Settings → API
-const SUPABASE_URL = "https://TU-PROYECTO.supabase.co";
-const SUPABASE_ANON_KEY = "TU_ANON_KEY_PUBLICA_AQUI";
+const SUPABASE_URL = "https://fhjgynhjxsvxtgzlovlb.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZoamd5bmhqeHN2eHRnemxvdmxiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4OTEwMDIsImV4cCI6MjA5NDQ2NzAwMn0.0IehIW_NBHDPMEDqnpkH7i4vooxV6xTGVdA6R3BRnTk";
 
 // Nombre de la tabla en Supabase
 const TABLA_LEADS = "leads";
