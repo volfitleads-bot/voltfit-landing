@@ -8,6 +8,10 @@
   <meta name="author" content="VoltFit" />
   <title>VoltFit | Ropa deportiva moderna, cómoda y accesible</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Tipografía moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <!-- Favicon simple basado en SVG -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
 </head>
@@ -31,6 +35,7 @@
 
       <!-- Lado izquierdo: información -->
       <section class="hero__info">
+        <span class="hero__badge">Próximo lanzamiento 2026</span>
         <h1 class="hero__brand">VoltFit</h1>
         <h2 class="hero__title">Ropa deportiva moderna, cómoda y accesible</h2>
         <p class="hero__lead">
@@ -56,6 +61,7 @@
       <!-- Lado derecho: formulario de captación -->
       <section class="form-card" id="contacto">
         <h3 class="form-card__title">Quiero más información</h3>
+        <p class="form-card__subtitle">Llena el formulario y te contactaremos en menos de 24 horas.</p>
 
         <form id="leadForm" novalidate>
 
@@ -130,16 +136,18 @@
             <small class="field__error" id="err-ubicacion"></small>
           </div>
 
-          <!-- Producto / interés -->
+          <!-- Producto / interés (sincronizado con la sección de productos) -->
           <div class="field">
             <label for="interes">Producto de interés *</label>
             <select id="interes" name="interes" required>
               <option value="">Selecciona una opción</option>
-              <option value="Playeras deportivas">Playeras deportivas</option>
-              <option value="Shorts y leggings">Shorts y leggings</option>
-              <option value="Conjuntos completos">Conjuntos completos</option>
-              <option value="Accesorios">Accesorios</option>
-              <option value="Membresía Premium">Membresía Premium</option>
+              <option value="Playeras deportivas">👕 Playeras deportivas</option>
+              <option value="Shorts y leggings">🩳 Shorts y leggings</option>
+              <option value="Sudaderas y hoodies">🧥 Sudaderas y hoodies</option>
+              <option value="Conjuntos completos">🎽 Conjuntos completos</option>
+              <option value="Tenis y calzado deportivo">👟 Tenis y calzado deportivo</option>
+              <option value="Accesorios">🎒 Accesorios deportivos</option>
+              <option value="Membresía Premium">⭐ Membresía Premium</option>
               <option value="Otro">Otro</option>
             </select>
             <small class="field__error" id="err-interes"></small>
@@ -188,31 +196,108 @@
     </div>
   </main>
 
-  <!-- ===== SECCIÓN PRODUCTOS (resumen visual extra) ===== -->
+  <!-- ===== SECCIÓN PRODUCTOS (sincronizada con el dropdown) ===== -->
   <section id="productos" class="products">
     <div class="container">
-      <h2 class="section-title">Nuestros productos próximos</h2>
+      <div class="section-header">
+        <span class="section-eyebrow">Nuestra colección</span>
+        <h2 class="section-title">Productos próximos a lanzarse</h2>
+        <p class="section-subtitle">Descubre todo lo que VoltFit traerá para ti. Selecciona el que más te interese en el formulario y serás de los primeros en saber cuando esté disponible.</p>
+      </div>
       <div class="products__grid">
-        <article class="product-card">
-          <div class="product-card__icon">👕</div>
-          <h3>Playeras</h3>
-          <p>Tela ligera, transpirable y secado rápido.</p>
+
+        <article class="product-card" data-product="Playeras deportivas">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">👕</div>
+          </div>
+          <h3>Playeras deportivas</h3>
+          <p>Tela ligera, transpirable y secado rápido para tus mejores entrenamientos.</p>
+          <span class="product-card__tag">Próximamente</span>
         </article>
-        <article class="product-card">
-          <div class="product-card__icon">🩳</div>
+
+        <article class="product-card" data-product="Shorts y leggings">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">🩳</div>
+          </div>
           <h3>Shorts y leggings</h3>
-          <p>Diseñados para máxima libertad de movimiento.</p>
+          <p>Máxima libertad de movimiento con tejidos elásticos premium.</p>
+          <span class="product-card__tag">Próximamente</span>
         </article>
-        <article class="product-card">
-          <div class="product-card__icon">🎽</div>
-          <h3>Conjuntos</h3>
-          <p>Combinaciones modernas listas para entrenar.</p>
+
+        <article class="product-card" data-product="Sudaderas y hoodies">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">🧥</div>
+          </div>
+          <h3>Sudaderas y hoodies</h3>
+          <p>Estilo urbano y abrigo perfecto para tus días más fríos.</p>
+          <span class="product-card__tag">Próximamente</span>
         </article>
-        <article class="product-card">
-          <div class="product-card__icon">🎒</div>
-          <h3>Accesorios</h3>
-          <p>Mochilas, bandas y botellas deportivas.</p>
+
+        <article class="product-card" data-product="Conjuntos completos">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">🎽</div>
+          </div>
+          <h3>Conjuntos completos</h3>
+          <p>Combinaciones modernas listas para entrenar — sin pensarlo.</p>
+          <span class="product-card__tag product-card__tag--hot">🔥 Top</span>
         </article>
+
+        <article class="product-card" data-product="Tenis y calzado deportivo">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">👟</div>
+          </div>
+          <h3>Tenis y calzado</h3>
+          <p>Diseñados con amortiguación inteligente y suela antiderrapante.</p>
+          <span class="product-card__tag">Próximamente</span>
+        </article>
+
+        <article class="product-card" data-product="Accesorios">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">🎒</div>
+          </div>
+          <h3>Accesorios deportivos</h3>
+          <p>Mochilas, bandas, botellas y todo lo que necesitas para entrenar.</p>
+          <span class="product-card__tag">Próximamente</span>
+        </article>
+
+        <article class="product-card product-card--featured" data-product="Membresía Premium">
+          <div class="product-card__icon-wrap">
+            <div class="product-card__icon">⭐</div>
+          </div>
+          <h3>Membresía Premium</h3>
+          <p>Acceso anticipado a lanzamientos, descuentos exclusivos y envío gratis.</p>
+          <span class="product-card__tag product-card__tag--premium">✨ Exclusivo</span>
+        </article>
+
+      </div>
+
+      <div class="products__cta">
+        <p>¿Alguno te llamó la atención?</p>
+        <a href="#contacto" class="btn-secondary">Solicitar información</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN STATS (números que dan confianza) ===== -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat">
+          <div class="stat__number" data-target="100">0</div>
+          <div class="stat__label">Diseños únicos</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="32">0</div>
+          <div class="stat__label">Estados de México</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="24">0</div>
+          <div class="stat__label">Horas de envío</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="100">0</div>
+          <div class="stat__label">% Satisfacción</div>
+        </div>
       </div>
     </div>
   </section>
