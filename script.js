@@ -97,7 +97,7 @@ async function enviarLeadASupabase(datosLead) {
       "apikey": SUPABASE_ANON_KEY,
       "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
       "Content-Type": "application/json",
-      "Prefer": "return=representation"
+      "Prefer": "return=minimal"
     },
     body: JSON.stringify(datosLead)
   });
@@ -112,7 +112,7 @@ async function enviarLeadASupabase(datosLead) {
     }
     throw new Error(`Supabase error (${response.status}): ${errorTxt}`);
   }
-  return await response.json();
+  return true;
 }
 
 // ============= 5) MANEJO DEL FORMULARIO =============
