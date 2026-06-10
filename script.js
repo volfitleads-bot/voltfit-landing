@@ -58,20 +58,21 @@ function limpiarErrores() {
  * por si alguien manda datos sin pasar por esta UI.
  */
 function clasificarLead(datos) {
-  let categoria = "General";
+  const u = (datos.ubicacion || "").toLowerCase();
+
+  // Prioridad por ubicacion: Toluca/Metepec/Estado de Mexico = Alta
   let prioridad = "Media";
-  let zona = "Otra";
-
-  // Categoría por tipo de cliente
-  if (datos.tipo_cliente === "Empresa") categoria = "Empresarial";
-  else if (datos.tipo_cliente === "Persona") categoria = "Personal";
-
-  // Prioridad por interés
-  if (datos.interes === "Membresía Premium" || datos.interes === "Conjuntos completos") {
+  if (u.includes("toluca") || u.includes("metepec") ||
+      u.includes("estado de mexico") || u.includes("mexico")) {
+    prioridad = "Alta";
+  } else if (datos.interes === "Membresia Premium" || datos.interes === "Conjuntos completos") {
     prioridad = "Alta";
   } else if (datos.interes === "Accesorios" || datos.interes === "Otro") {
     prioridad = "Baja";
   }
+
+  return { prioridad };
+}
 
   // Zona por ubicación
   const ubic = (datos.ubicacion || "").toLowerCase();
@@ -239,11 +240,8 @@ document.addEventListener("DOMContentLoaded", () => {
       interes: datos.interes,
       comentarios: datos.comentarios || null,
       consentimiento: datos.consentimiento,
-      categoria: clasif.categoria,
       prioridad: clasif.prioridad,
-      zona: clasif.zona,
-      origen: "Landing Page VoltFit",
-      estado: "Nuevo"
+      notificado: false
     };
 
     // ----- Envío -----
