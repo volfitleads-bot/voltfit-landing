@@ -1,316 +1,301 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="VoltFit - Ropa deportiva moderna, cómoda y accesible. Únete y descubre nuestros lanzamientos exclusivos." />
-  <meta name="keywords" content="ropa deportiva, fitness, VoltFit, lanzamiento, deportes, México" />
-  <meta name="author" content="VoltFit" />
-  <title>VoltFit | Ropa deportiva moderna, cómoda y accesible</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Tipografía moderna -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <!-- Favicon simple basado en SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VoltFit - Ropa deportiva con actitud. Solicita informes y descubre nuestro financiamiento.">
+  <title>VoltFit - Ropa deportiva con actitud</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== HEADER (Barra superior) ===== -->
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a href="#" class="logo">⚡ <span>VoltFit</span></a>
+  <!-- HEADER (siempre visible) -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#" class="logo" id="logoLink">
+        <img src="imgs/logo.png" alt="VoltFit" onerror="this.style.display='none'">
+        <span>VoltFit</span>
+      </a>
       <nav class="nav">
-        <a href="#beneficios">Beneficios</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#beneficios" class="nav__link nav__link--main">Por que VoltFit</a>
+        <a href="#catalogo" class="nav__link nav__link--main">Productos</a>
+        <button type="button" id="btnSolicitar" class="nav__cta">Solicitar informes</button>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO (Sección principal con formulario) ===== -->
-  <main class="hero">
-    <div class="container hero__grid">
+  <!-- =============================================
+       VISTA PRINCIPAL (catalogo y propuesta)
+       ============================================= -->
+  <main id="vistaPrincipal" class="vista vista--principal">
 
-      <!-- Lado izquierdo: información -->
-      <section class="hero__info">
-        <span class="hero__badge">Próximo lanzamiento 2026</span>
-        <h1 class="hero__brand">VoltFit</h1>
-        <h2 class="hero__title">Ropa deportiva moderna, cómoda y accesible</h2>
-        <p class="hero__lead">
-          VoltFit es una propuesta enfocada en personas que buscan rendimiento, estilo y comodidad
-          en su vida diaria y actividades deportivas. Sé de los primeros en conocer nuestros próximos
-          lanzamientos y promociones exclusivas.
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">Pronto en el mercado</span>
+          <h1 class="hero__title">VoltFit</h1>
+          <p class="hero__lead">El equipo que <em>tu rutina</em> merece</p>
+          <p class="hero__subtitle">
+            Ropa deportiva con actitud, calidad real y diseno moderno.
+            Conocenos antes que nadie y se de los primeros en acceder
+            a nuestros lanzamientos.
+          </p>
+          <button type="button" class="btn btn--primary btn--hero" onclick="document.getElementById('btnSolicitar').click()">
+            Solicitar informes
+          </button>
+        </div>
+        <div class="hero__image">
+          <img src="imgs/hero.png" alt="Ropa deportiva VoltFit"
+               onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80'">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR -->
+    <section class="beneficios" id="beneficios">
+      <div class="container">
+        <p class="section__eyebrow">Por que VoltFit</p>
+        <h2 class="section__title">Nuestra propuesta de valor</h2>
+        <div class="features">
+          <article class="feature">
+            <img src="imgs/feature-calidad.png" alt="Calidad"
+                 onerror="this.src='https://images.unsplash.com/photo-1517438476312-10d79c077509?w=300&q=80'">
+            <h3>Calidad garantizada</h3>
+            <p>Materiales tecnicos y costuras reforzadas. Diseno pensado para el rendimiento real, no solo para la foto.</p>
+          </article>
+          <article class="feature">
+            <img src="imgs/feature-diseno.png" alt="Diseno"
+                 onerror="this.src='https://images.unsplash.com/photo-1556906781-9a412961c28c?w=300&q=80'">
+            <h3>Diseno con actitud</h3>
+            <p>Paleta de colores arriesgada y cortes modernos. Ropa que se ve igual de bien dentro y fuera del gimnasio.</p>
+          </article>
+          <article class="feature">
+            <img src="imgs/feature-comodidad.png" alt="Comodidad"
+                 onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=300&q=80'">
+            <h3>Comodidad total</h3>
+            <p>Telas transpirables, elasticidad de cuatro vias y costuras planas para que olvides que las traes puestas.</p>
+          </article>
+          <article class="feature">
+            <img src="imgs/feature-envio.png" alt="Envio"
+                 onerror="this.src='https://images.unsplash.com/photo-1568010967053-c0d9e88a5cdf?w=300&q=80'">
+            <h3>Envio en Toluca y municipios</h3>
+            <p>Entregas a Toluca, Metepec, San Mateo Atenco, Zinacantepec y municipios cercanos en pocos dias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGO -->
+    <section class="catalogo" id="catalogo">
+      <div class="container">
+        <p class="section__eyebrow">Catalogo</p>
+        <h2 class="section__title">Conoce nuestra coleccion</h2>
+        <p class="section__lead">Pronto en el mercado. Descubre las prendas que vendran en nuestro lanzamiento.</p>
+
+        <div class="productos">
+          <article class="producto">
+            <img src="imgs/cat-playeras.png" alt="Playeras deportivas"
+                 onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80'">
+            <h3>Playeras deportivas</h3>
+            <p>Tela ligera y transpirable, ideal para entrenamientos largos.</p>
+          </article>
+          <article class="producto">
+            <img src="imgs/cat-shorts.png" alt="Shorts y leggings"
+                 onerror="this.src='https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80'">
+            <h3>Shorts y leggings</h3>
+            <p>Elasticidad de cuatro vias, costuras planas, cintura comoda.</p>
+          </article>
+          <article class="producto">
+            <img src="imgs/cat-sudaderas.png" alt="Sudaderas y hoodies"
+                 onerror="this.src='https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80'">
+            <h3>Sudaderas y hoodies</h3>
+            <p>Para entrenamiento al aire libre o looks casuales con actitud.</p>
+          </article>
+          <article class="producto">
+            <img src="imgs/cat-conjuntos.png" alt="Conjuntos completos"
+                 onerror="this.src='https://images.unsplash.com/photo-1483721310020-03333e577078?w=400&q=80'">
+            <h3>Conjuntos completos</h3>
+            <p>Sets coordinados para que tu look quede impecable sin pensarlo.</p>
+          </article>
+          <article class="producto">
+            <img src="imgs/cat-tenis.png" alt="Tenis y calzado deportivo"
+                 onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80'">
+            <h3>Tenis y calzado deportivo</h3>
+            <p>Amortiguacion, soporte y un diseno que destaca en cualquier piso.</p>
+          </article>
+          <article class="producto">
+            <img src="imgs/cat-accesorios.png" alt="Accesorios"
+                 onerror="this.src='https://images.unsplash.com/photo-1591291621164-2c6367723315?w=400&q=80'">
+            <h3>Accesorios</h3>
+            <p>Mochilas, gorras, calcetas y todo lo que completa tu rutina.</p>
+          </article>
+        </div>
+
+        <div class="catalogo__cta">
+          <p>Te interesa alguno? Solicita informes y te contactamos antes del lanzamiento.</p>
+          <button type="button" class="btn btn--primary" onclick="document.getElementById('btnSolicitar').click()">
+            Solicitar informes
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================================
+       VISTA FORMULARIO (oculta por defecto)
+       ============================================= -->
+  <main id="vistaFormulario" class="vista vista--formulario" style="display:none;">
+    <section class="form-hero">
+      <div class="container">
+        <button type="button" id="btnVolver" class="btn-volver">&larr; Volver al inicio</button>
+        <p class="section__eyebrow">Solicitar informes</p>
+        <h1 class="form-hero__title">Unete ahora y se parte del movimiento VoltFit</h1>
+        <p class="form-hero__subtitle">
+          Deja tus datos y descubre nuestras opciones de financiamiento,
+          descuentos exclusivos para los primeros clientes y acceso anticipado a la coleccion.
         </p>
+      </div>
+    </section>
 
-        <ul class="benefits" id="beneficios">
-          <li><span class="check">✓</span> Diseños deportivos modernos</li>
-          <li><span class="check">✓</span> Comodidad para entrenamiento y uso diario</li>
-          <li><span class="check">✓</span> Productos accesibles y funcionales</li>
-          <li><span class="check">✓</span> Próximo lanzamiento exclusivo</li>
-          <li><span class="check">✓</span> Atención personalizada</li>
-          <li><span class="check">✓</span> Envíos a toda la República Mexicana</li>
-        </ul>
+    <section class="contacto">
+      <div class="container contacto__inner">
+        <div class="contacto__intro">
+          <h2 class="section__title">Cuentanos sobre ti</h2>
+          <ul class="bullets">
+            <li>Sin costo ni compromiso</li>
+            <li>Asesoria personalizada por tipo de cliente</li>
+            <li>Respuesta del equipo comercial en menos de 24 horas</li>
+            <li>Envios a Toluca, Metepec y municipios cercanos</li>
+            <li>Acceso anticipado a nuestros lanzamientos y promociones</li>
+          </ul>
+        </div>
 
-        <p class="hero__cta-text">
-          🚀 <strong>Únete ahora y descubre antes que nadie el lanzamiento oficial de VoltFit</strong>
-        </p>
-      </section>
-
-      <!-- Lado derecho: formulario de captación -->
-      <section class="form-card" id="contacto">
-        <h3 class="form-card__title">Quiero más información</h3>
-        <p class="form-card__subtitle">Llena el formulario y te contactaremos en menos de 24 horas.</p>
-
-        <form id="leadForm" novalidate>
-
-          <!-- Nombre completo -->
+        <form id="leadForm" class="form" novalidate>
           <div class="field">
             <label for="nombre">Nombre completo *</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ej. Arlet Hernández"
-              required
-              minlength="3"
-              maxlength="80"
-              autocomplete="name"
-            />
-            <small class="field__error" id="err-nombre"></small>
+            <input id="nombre" name="nombre" type="text" required>
+            <small id="err-nombre" class="field__error"></small>
           </div>
-
-          <!-- Correo electrónico -->
           <div class="field">
-            <label for="correo">Correo electrónico *</label>
-            <input
-              type="email"
-              id="correo"
-              name="correo"
-              placeholder="Ej. tu@correo.com"
-              required
-              autocomplete="email"
-            />
-            <small class="field__error" id="err-correo"></small>
+            <label for="correo">Correo electronico *</label>
+            <input id="correo" name="correo" type="email" required>
+            <small id="err-correo" class="field__error"></small>
           </div>
-
-          <!-- Teléfono -->
           <div class="field">
-            <label for="telefono">Teléfono (10 dígitos) *</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="Ej. 7221234567"
-              required
-              pattern="[0-9]{10}"
-              maxlength="10"
-              autocomplete="tel"
-            />
-            <small class="field__error" id="err-telefono"></small>
+            <label for="telefono">Telefono *</label>
+            <input id="telefono" name="telefono" type="tel" maxlength="10" pattern="[0-9]{10}" required>
+            <small>Formato: 10 digitos sin espacios</small>
+            <small id="err-telefono" class="field__error"></small>
           </div>
-
-          <!-- Tipo de cliente -->
+          <div class="field">
+            <label for="interes">Producto de interes *</label>
+            <select id="interes" name="interes" required>
+              <option value="">Selecciona un producto</option>
+              <option>Playeras deportivas</option>
+              <option>Shorts y leggings</option>
+              <option>Sudaderas y hoodies</option>
+              <option>Conjuntos completos</option>
+              <option>Tenis y calzado deportivo</option>
+              <option>Accesorios</option>
+              <option>Membresia Premium</option>
+              <option>Otro</option>
+            </select>
+            <small id="err-interes" class="field__error"></small>
+          </div>
           <div class="field">
             <label for="tipo_cliente">Tipo de cliente *</label>
             <select id="tipo_cliente" name="tipo_cliente" required>
-              <option value="">Selecciona una opción</option>
-              <option value="Persona">Persona</option>
-              <option value="Empresa">Empresa</option>
+              <option value="">Selecciona...</option>
+              <option>Persona</option>
+              <option>Empresa</option>
             </select>
-            <small class="field__error" id="err-tipo_cliente"></small>
+            <small id="err-tipo_cliente" class="field__error"></small>
           </div>
-
-          <!-- Ubicación -->
           <div class="field">
-            <label for="ubicacion">Ubicación (ciudad / estado) *</label>
-            <input
-              type="text"
-              id="ubicacion"
-              name="ubicacion"
-              placeholder="Ej. Toluca, Estado de México"
-              required
-              maxlength="100"
-            />
-            <small class="field__error" id="err-ubicacion"></small>
+            <label for="ubicacion">Ubicacion (ciudad o estado) *</label>
+            <input id="ubicacion" name="ubicacion" type="text" required placeholder="Ej. Toluca, Estado de Mexico">
+            <small id="err-ubicacion" class="field__error"></small>
           </div>
-
-          <!-- Producto / interés (sincronizado con la sección de productos) -->
           <div class="field">
-            <label for="interes">Producto de interés *</label>
-            <select id="interes" name="interes" required>
-              <option value="">Selecciona una opción</option>
-              <option value="Playeras deportivas">👕 Playeras deportivas</option>
-              <option value="Shorts y leggings">🩳 Shorts y leggings</option>
-              <option value="Sudaderas y hoodies">🧥 Sudaderas y hoodies</option>
-              <option value="Conjuntos completos">🎽 Conjuntos completos</option>
-              <option value="Tenis y calzado deportivo">👟 Tenis y calzado deportivo</option>
-              <option value="Accesorios">🎒 Accesorios deportivos</option>
-              <option value="Membresía Premium">⭐ Membresía Premium</option>
-              <option value="Otro">Otro</option>
-            </select>
-            <small class="field__error" id="err-interes"></small>
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" rows="3"></textarea>
           </div>
-
-          <!-- Comentarios opcionales -->
-          <div class="field">
-            <label for="comentarios">Comentarios (opcional)</label>
-            <textarea
-              id="comentarios"
-              name="comentarios"
-              rows="3"
-              placeholder="Cuéntanos qué estás buscando..."
-              maxlength="300"
-            ></textarea>
-          </div>
-
-          <!-- Consentimiento -->
           <div class="field field--check">
-            <input type="checkbox" id="consentimiento" name="consentimiento" required />
-            <label for="consentimiento">
-              Acepto el aviso de privacidad y autorizo el uso de mis datos para fines de contacto comercial. *
+            <label>
+              <input type="checkbox" id="consentimiento" name="consentimiento" required>
+              Acepto el <a href="#aviso">aviso de privacidad</a>. *
             </label>
-            <small class="field__error" id="err-consentimiento"></small>
+            <small id="err-consentimiento" class="field__error"></small>
           </div>
-
-          <!-- Botón de envío -->
-          <button type="submit" id="submitBtn" class="btn-primary">
-            Enviar
-          </button>
-
-          <!-- Mensajes de estado -->
-          <p class="form-info">
-            📣 Nuestro equipo comercial se pondrá en contacto contigo próximamente.
-          </p>
-          <p class="legal">
-            Al enviar este formulario aceptas nuestro aviso de privacidad y autorizas el uso de
-            tus datos para fines de contacto, seguimiento comercial y análisis de mercado.
-          </p>
-
-          <!-- Mensaje de éxito / error (oculto inicialmente) -->
+          <button type="submit" id="submitBtn" class="btn btn--primary btn--block">Enviar solicitud</button>
           <div id="formStatus" class="form-status" hidden></div>
         </form>
-      </section>
-
-    </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ===== SECCIÓN PRODUCTOS (sincronizada con el dropdown) ===== -->
-  <section id="productos" class="products">
+  <!-- FOOTER (siempre visible) -->
+  <footer class="footer" id="aviso">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Nuestra colección</span>
-        <h2 class="section-title">Productos próximos a lanzarse</h2>
-        <p class="section-subtitle">Descubre todo lo que VoltFit traerá para ti. Selecciona el que más te interese en el formulario y serás de los primeros en saber cuando esté disponible.</p>
-      </div>
-      <div class="products__grid">
-
-        <article class="product-card" data-product="Playeras deportivas">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">👕</div>
-          </div>
-          <h3>Playeras deportivas</h3>
-          <p>Tela ligera, transpirable y secado rápido para tus mejores entrenamientos.</p>
-          <span class="product-card__tag">Próximamente</span>
-        </article>
-
-        <article class="product-card" data-product="Shorts y leggings">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">🩳</div>
-          </div>
-          <h3>Shorts y leggings</h3>
-          <p>Máxima libertad de movimiento con tejidos elásticos premium.</p>
-          <span class="product-card__tag">Próximamente</span>
-        </article>
-
-        <article class="product-card" data-product="Sudaderas y hoodies">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">🧥</div>
-          </div>
-          <h3>Sudaderas y hoodies</h3>
-          <p>Estilo urbano y abrigo perfecto para tus días más fríos.</p>
-          <span class="product-card__tag">Próximamente</span>
-        </article>
-
-        <article class="product-card" data-product="Conjuntos completos">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">🎽</div>
-          </div>
-          <h3>Conjuntos completos</h3>
-          <p>Combinaciones modernas listas para entrenar — sin pensarlo.</p>
-          <span class="product-card__tag product-card__tag--hot">🔥 Top</span>
-        </article>
-
-        <article class="product-card" data-product="Tenis y calzado deportivo">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">👟</div>
-          </div>
-          <h3>Tenis y calzado</h3>
-          <p>Diseñados con amortiguación inteligente y suela antiderrapante.</p>
-          <span class="product-card__tag">Próximamente</span>
-        </article>
-
-        <article class="product-card" data-product="Accesorios">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">🎒</div>
-          </div>
-          <h3>Accesorios deportivos</h3>
-          <p>Mochilas, bandas, botellas y todo lo que necesitas para entrenar.</p>
-          <span class="product-card__tag">Próximamente</span>
-        </article>
-
-        <article class="product-card product-card--featured" data-product="Membresía Premium">
-          <div class="product-card__icon-wrap">
-            <div class="product-card__icon">⭐</div>
-          </div>
-          <h3>Membresía Premium</h3>
-          <p>Acceso anticipado a lanzamientos, descuentos exclusivos y envío gratis.</p>
-          <span class="product-card__tag product-card__tag--premium">✨ Exclusivo</span>
-        </article>
-
-      </div>
-
-      <div class="products__cta">
-        <p>¿Alguno te llamó la atención?</p>
-        <a href="#contacto" class="btn-secondary">Solicitar información</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECCIÓN STATS (números que dan confianza) ===== -->
-  <section class="stats">
-    <div class="container">
-      <div class="stats__grid">
-        <div class="stat">
-          <div class="stat__number" data-target="100">0</div>
-          <div class="stat__label">Diseños únicos</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number" data-target="32">0</div>
-          <div class="stat__label">Estados de México</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number" data-target="24">0</div>
-          <div class="stat__label">Horas de envío</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number" data-target="100">0</div>
-          <div class="stat__label">% Satisfacción</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> VoltFit. Todos los derechos reservados.</p>
-      <p class="footer__legal">Sitio creado como proyecto académico — Arlet Hernández</p>
+      <h3>Aviso de Privacidad</h3>
+      <p>
+        <strong>VoltFit</strong>, con domicilio en Toluca, Estado de Mexico, es el responsable
+        del tratamiento de los datos personales que usted nos proporcione a traves del presente formulario.
+      </p>
+      <p>Sus datos seran utilizados para dar seguimiento a su interes, contactarle con informacion sobre la marca y elaborar estadisticas internas de demanda.</p>
+      <p>
+        Los datos recabados son: nombre, correo electronico, telefono y ubicacion.
+        No se comparten con terceros sin su consentimiento expreso, salvo obligacion legal.
+        Para ejercer sus derechos ARCO escriba a contacto@voltfit.com.
+      </p>
+      <p class="footer__copy">&copy; <span id="year">2026</span> VoltFit - Equipo JA Infinity. Toluca, Estado de Mexico.</p>
     </div>
   </footer>
 
-  <!-- Script principal -->
+  <!-- Cambio de vistas (solo presentacion, NO toca el envio del form) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const vistaPrincipal = document.getElementById('vistaPrincipal');
+      const vistaFormulario = document.getElementById('vistaFormulario');
+      const btnSolicitar = document.getElementById('btnSolicitar');
+      const btnVolver = document.getElementById('btnVolver');
+      const logoLink = document.getElementById('logoLink');
+      const navMain = document.querySelectorAll('.nav__link--main');
+
+      function mostrarFormulario(e) {
+        if (e) e.preventDefault();
+        vistaPrincipal.style.display = 'none';
+        vistaFormulario.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+      function mostrarPrincipal(e) {
+        if (e) e.preventDefault();
+        vistaFormulario.style.display = 'none';
+        vistaPrincipal.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+      btnSolicitar.addEventListener('click', mostrarFormulario);
+      btnVolver.addEventListener('click', mostrarPrincipal);
+      logoLink.addEventListener('click', mostrarPrincipal);
+      // Los links del nav (Por que VoltFit / Productos) deben llevar a la vista principal y luego al ancla
+      navMain.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (vistaFormulario.style.display !== 'none') {
+            e.preventDefault();
+            mostrarPrincipal();
+            setTimeout(() => {
+              const id = link.getAttribute('href').replace('#','');
+              const el = document.getElementById(id);
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Logica del formulario (sin cambios, sigue funcionando igual que antes) -->
   <script src="script.js"></script>
 </body>
 </html>
